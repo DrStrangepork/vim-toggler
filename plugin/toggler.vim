@@ -1,6 +1,6 @@
 " Plugin for quickly toggling stuff
 " Maintainer:   Rick Kasten <rickkasten@gmail.com>
-" URL:          http://github.com/DrStrangepork/vim-toggleindent
+" URL:          http://github.com/DrStrangepork/vim-toggler
 
 " Only do this when not done yet for this buffer
 if exists("b:vim_toggler_indent_plugin")
@@ -19,11 +19,11 @@ let b:vim_toggler_wrap_plugin = 1
 fun! s:ToggleIndent()
     if &indent == ""
         let &indent = s:old_indent
-        echo "Indent is for Vim (" . &indent . ")"
+        echo "Indent is indented"
     else
         let s:old_indent = &indent
         let &indent=""
-        echo "Indent is for terminal"
+        echo "Indent is not indented"
     endif
 endfunction
 
